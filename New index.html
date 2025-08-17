@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MFHSWQSM');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTM Practice Gaming Site</title>
+  <!-- Google Tag Manager -->
+  <!-- Replace GTM-XXXXXXX with your actual GTM container ID -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+    button { padding: 10px 20px; margin: 10px; font-size: 16px; cursor: pointer; }
+    .consent { margin-top: 20px; }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHSWQSM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <h1>Welcome to GTM Practice Gaming Site</h1>
+  <p>Use this site to practice GTM tags, triggers, variables, and events.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6cPiCPDjxl0?si=dPw-FeqWoz76CPs6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <button onclick="startGame()">Start Game</button>
+  <button onclick="makePurchase()">Purchase Item ($9.99)</button>
+
+  <div class="consent">
+    <label>
+      <input type="checkbox" id="consentCheckbox" onchange="toggleConsent()"> I consent to tracking
+    </label>
+  </div>
+
+  <script>
+    // dataLayer initialization
+    window.dataLayer = window.dataLayer || [];
+
+    function startGame() {
+      alert('Game started!');
+      dataLayer.push({
+        'event': 'start_game',
+        'game_level': 1
+      });
+    }
+
+    function makePurchase() {
+      alert('Purchase successful!');
+      dataLayer.push({
+        'event': 'purchase',
+        'item_name': 'Sword of Destiny',
+        'value': 9.99,
+        'currency': 'USD'
+      });
+    }
+
+    function toggleConsent() {
+      let consent = document.getElementById('consentCheckbox').checked;
+      dataLayer.push({
+        'event': 'consent_update',
+        'consent_granted': consent
+      });
+    }
+  </script>
+</body>
+</html>
